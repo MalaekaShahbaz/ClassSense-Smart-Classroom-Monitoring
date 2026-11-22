@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassSense Dashboard</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>ClassSense</h1>
+        <p>Smart Classroom Monitoring System</p>
+    </header>
+
+    <main>
+        <h2>Classroom Environmental Dashboard</h2>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Temperature</h3>
+                <p>-- °C</p>
+            </div>
+
+            <div class="card">
+                <h3>Humidity</h3>
+                <p>-- %</p>
+            </div>
+
+            <div class="card">
+                <h3>Sensor Status</h3>
+                <p>Not connected</p>
+            </div>
+        </section>
+
+        <p class="note">
+            Dashboard interface ready.
+            Sensor integration is the next stage.
+        </p>
+    </main>
+</body>
+</html>
