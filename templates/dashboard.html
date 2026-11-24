@@ -1,44 +1,88 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ClassSense Dashboard</title>
+
+    <!-- Dashboard CSS -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
         <h1>ClassSense</h1>
         <p>Smart Classroom Monitoring System</p>
     </header>
 
     <main>
+
         <h2>Classroom Environmental Dashboard</h2>
 
+        <p class="note">
+            Monitoring classroom temperature and humidity
+            using simulated DHT11 sensor readings.
+        </p>
+
+        <!-- Live Sensor Readings -->
         <section class="cards">
+
+            <!-- Temperature Card -->
             <div class="card">
                 <h3>Temperature</h3>
-                <p>-- °C</p>
+                <p id="temperature">-- °C</p>
             </div>
 
+            <!-- Humidity Card -->
             <div class="card">
                 <h3>Humidity</h3>
-                <p>-- %</p>
+                <p id="humidity">-- %</p>
             </div>
 
+            <!-- Sensor Status Card -->
             <div class="card">
                 <h3>Sensor Status</h3>
-                <p>Not connected</p>
+                <p id="sensor-status">Loading...</p>
             </div>
+
         </section>
 
-        <p class="note">
-            Dashboard interface ready.
-            Sensor integration is the next stage.
+        <!-- Recent Measurements -->
+        <section class="history">
+
+            <h2>Recent Measurements</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                    </tr>
+                </thead>
+
+                <tbody id="readings-table">
+                    <!-- JavaScript will add readings here -->
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Last Updated -->
+        <p class="note" id="last-updated">
+            Waiting for sensor readings...
         </p>
+
     </main>
+
+    <!-- JavaScript for automatic dashboard updates -->
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
 </body>
 </html>

@@ -9,7 +9,7 @@ and real DHT11 sensor readings on Raspberry Pi.
 
 from datetime import datetime
 
-from simulator import generate_reading
+from .simulator import generate_reading
 
 
 class SensorError(Exception):

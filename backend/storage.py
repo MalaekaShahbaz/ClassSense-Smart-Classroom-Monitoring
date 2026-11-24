@@ -98,6 +98,7 @@ if __name__ == "__main__":
     reading = generate_reading()
 
     save_reading(reading)
+    
 
     print("Reading saved successfully!")
     print(f"Timestamp: {reading['timestamp']}")
